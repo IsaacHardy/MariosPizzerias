@@ -7,3 +7,12 @@ C:\Users\MrHydeOut\Source\Repos\MariosPizzerias2\Business\bin\Debug\netcoreapp1.
 C:\Users\MrHydeOut\Source\Repos\MariosPizzerias2\Business\bin\Debug\netcoreapp1.1\MariosPizzerias.Data.pdb
 C:\Users\MrHydeOut\Source\Repos\MariosPizzerias2\Business\obj\Debug\netcoreapp1.1\MariosPizzerias.Business.dll
 C:\Users\MrHydeOut\Source\Repos\MariosPizzerias2\Business\obj\Debug\netcoreapp1.1\MariosPizzerias.Business.pdb
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias\Business\bin\Debug\netcoreapp1.1\MariosPizzerias.Business.deps.json
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias\Business\bin\Debug\netcoreapp1.1\MariosPizzerias.Business.dll
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias\Business\bin\Debug\netcoreapp1.1\MariosPizzerias.Business.pdb
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias\Business\bin\Debug\netcoreapp1.1\MariosPizzerias.Data.dll
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias\Business\bin\Debug\netcoreapp1.1\MariosPizzerias.Data.pdb
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias\Business\obj\Debug\netcoreapp1.1\Business.csprojResolveAssemblyReference.cache
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias\Business\obj\Debug\netcoreapp1.1\Business.AssemblyInfo.cs
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias\Business\obj\Debug\netcoreapp1.1\MariosPizzerias.Business.dll
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias\Business\obj\Debug\netcoreapp1.1\MariosPizzerias.Business.pdb

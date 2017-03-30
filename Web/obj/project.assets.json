@@ -10252,10 +10252,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MrHydeOut\\Source\\Repos\\MariosPizzerias2\\Web\\Web.csproj",
+      "projectUniqueName": "C:\\Users\\MrHydeOut\\Source\\Repos\\MariosPizzerias\\Web\\Web.csproj",
       "projectName": "Web",
-      "projectPath": "C:\\Users\\MrHydeOut\\Source\\Repos\\MariosPizzerias2\\Web\\Web.csproj",
-      "outputPath": "C:\\Users\\MrHydeOut\\Source\\Repos\\MariosPizzerias2\\Web\\obj\\",
+      "projectPath": "C:\\Users\\MrHydeOut\\Source\\Repos\\MariosPizzerias\\Web\\Web.csproj",
+      "outputPath": "C:\\Users\\MrHydeOut\\Source\\Repos\\MariosPizzerias\\Web\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
@@ -10263,11 +10263,11 @@
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {
-            "C:\\Users\\MrHydeOut\\Source\\Repos\\MariosPizzerias2\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\MrHydeOut\\Source\\Repos\\MariosPizzerias2\\Data\\Data.csproj"
+            "C:\\Users\\MrHydeOut\\Source\\Repos\\MariosPizzerias\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\MrHydeOut\\Source\\Repos\\MariosPizzerias\\Data\\Data.csproj"
             },
-            "C:\\Users\\MrHydeOut\\Source\\Repos\\MariosPizzerias2\\Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\MrHydeOut\\Source\\Repos\\MariosPizzerias2\\Business\\Business.csproj"
+            "C:\\Users\\MrHydeOut\\Source\\Repos\\MariosPizzerias\\Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\MrHydeOut\\Source\\Repos\\MariosPizzerias\\Business\\Business.csproj"
             }
           }
         }
