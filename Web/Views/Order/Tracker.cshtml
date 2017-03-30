@@ -1,0 +1,14 @@
+﻿@model Data.Order
+<h1>@Model.OrderOwner</h1>
+<label>Your Name: </label>
+<div>
+    @Model.OrderOwner<div>
+    <label>Order Status: </label>
+    <div>
+        @Model.OrderStatus<div>
+        <label>Total Price: </label>
+        <div>
+            @Model.OrderPrice<div>
+            <div>
+                @Html.ActionLink("Order", "Index")
+            </div>

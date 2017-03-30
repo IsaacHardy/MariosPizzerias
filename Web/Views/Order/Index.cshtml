@@ -1,0 +1,49 @@
+﻿@model Web.ViewModels.OrderPageViewModel
+<p>Orders Page</p>
+@Html.ActionLink("Create a new Order", "Create")
+<br />
+<br />
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Order Status</th>
+        <th>Total Price</th>
+    </tr>
+    @foreach (var order in Model.Order)
+    {
+        <tr>
+            <td>@order.OrderOwner</td>
+            <td>@order.OrderStatus</td>
+            <td>@order.OrderPrice</td>
+            <td>
+                @Html.ActionLink("View", "Tracker", new { id = order.OrderId })
+            </td>
+        </tr>    }
+</table>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Number</th>
+    </tr>
+    @foreach (var location in Model.Location)
+    {
+        <tr>
+            <td>@location.LocationName</td>
+            <td>@location.LocationAddress</td>
+            <td>@location.LocationPhoneNumber</td>
+        </tr>    }
+</table>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Number</th>
+    </tr>
+    @foreach (var pizza in Model.Pizza)
+    {
+        <tr>
+            <td>@pizza.PizzaId</td>
+            <td>@pizza.OrderId</td>
+        </tr>    }
+</table>

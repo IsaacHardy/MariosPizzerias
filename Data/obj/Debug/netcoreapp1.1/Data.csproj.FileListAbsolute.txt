@@ -1,0 +1,7 @@
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias2\Data\bin\Debug\netcoreapp1.1\MariosPizzerias.Data.deps.json
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias2\Data\bin\Debug\netcoreapp1.1\MariosPizzerias.Data.dll
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias2\Data\bin\Debug\netcoreapp1.1\MariosPizzerias.Data.pdb
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias2\Data\obj\Debug\netcoreapp1.1\Data.AssemblyInfo.cs
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias2\Data\obj\Debug\netcoreapp1.1\MariosPizzerias.Data.dll
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias2\Data\obj\Debug\netcoreapp1.1\MariosPizzerias.Data.pdb
+C:\Users\MrHydeOut\Source\Repos\MariosPizzerias2\Data\obj\Debug\netcoreapp1.1\Data.csprojResolveAssemblyReference.cache

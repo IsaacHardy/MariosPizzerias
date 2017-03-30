@@ -1,0 +1,1 @@
+﻿--these sql commands will populate database with initial data
