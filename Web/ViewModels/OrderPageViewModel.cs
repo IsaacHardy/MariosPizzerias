@@ -5,6 +5,6 @@ namespace Web.ViewModels
 {
     public class OrderPageViewModel
     {
-        public IEnumerable<DTO.Order> Order { get; set; }
+        public IEnumerable<DTO.Order> Orders { get; set; }
     }
 }

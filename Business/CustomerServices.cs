@@ -23,7 +23,9 @@ namespace MariosPizzerias.Business
         //Moved from IOrderData (please review!)
         public IEnumerable<DTO.Order> GetAll()
         {
-            return new List<DTO.Order>();
+           
+            var orders = _context.Orders.ToList();
+            return new List<DTO.Order>(orders);
         }
         public DTO.Order Get(int id)
         {

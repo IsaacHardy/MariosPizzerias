@@ -1,8 +1,7 @@
-﻿@model Data.Order
-<div>
+﻿<div>
     <table>
 			<th>Name</th>
-        @foreach (var order in Model.Order)
+        @foreach (var order in Model.Orders)
         {
             <tr>
             	<td>@order.OrderOwner</td>

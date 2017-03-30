@@ -19,9 +19,9 @@ namespace Controllers
 
         public IActionResult Index()
         {
-            //var model = new OrderPageViewModel();
-            //model.Order = _customerServices.GetAll();
-            return View();
+            var model = new OrderPageViewModel();
+            model.Orders = _customerServices.GetAll();
+            return View(model);
         }
 
         public IActionResult Tracker()
