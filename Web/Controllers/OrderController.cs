@@ -9,19 +9,19 @@ namespace Controllers
     public class OrderController : Controller
     {
 		private ICustomerServices _customerServices;
-		private IAdminServices _adminServices;
+		//private IAdminServices _adminServices;
 
-		public OrderController(ICustomerServices customerServices, IAdminServices adminServices)
+		public OrderController(ICustomerServices customerServices)
         {
 			_customerServices = customerServices;
-			_adminServices = adminServices;
+			//_adminServices = adminServices;
         }
 
         public IActionResult Index()
         {
-            var model = new OrderPageViewModel();
-            model.Order = _customerServices.GetAll();
-            return View(model);
+            //var model = new OrderPageViewModel();
+            //model.Order = _customerServices.GetAll();
+            return View();
         }
 
         public IActionResult Tracker()

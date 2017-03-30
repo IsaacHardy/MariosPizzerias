@@ -1,1 +1,12 @@
-﻿<h2>Hi</h2>
+﻿@model Data.Order
+<div>
+    <table>
+			<th>Name</th>
+        @foreach (var order in Model.Order)
+        {
+            <tr>
+            	<td>@order.OrderOwner</td>
+			</tr>
+		}
+    </table>
+</div>
