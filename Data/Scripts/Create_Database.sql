@@ -15,22 +15,27 @@ CREATE TABLE "Orders" (
 	"OrderOwner" TEXT, 
 	"OrderPrice" TEXT, 
 	"OrderStatus" INTEGER NOT NULL, 
-	"OrderTime" TEXT NOT NULL )
+	"OrderTime" TEXT NOT NULL 
+);
 	
+
+--drop table Pizzas
+CREATE TABLE "Pizzas" ( 
+	"PizzaId" INTEGER NOT NULL CONSTRAINT "PK_Pizzas" PRIMARY KEY AUTOINCREMENT, 
+	"OrderId" INTEGER NOT NULL 
+);
+
+--drop table Toppings
+CREATE TABLE "Toppings" ( 
+	"ToppingId" INTEGER NOT NULL CONSTRAINT "PK_Toppings" PRIMARY KEY AUTOINCREMENT, 
+	"ToppingName" TEXT, "ToppingQuantity" INTEGER NOT NULL 
+);
+
 --drop table PizzaTopping
 CREATE TABLE "PizzaTopping" ( 
 	"PizzaId" INTEGER NOT NULL, 
 	"ToppingId" INTEGER NOT NULL, 
 	CONSTRAINT "PK_PizzaTopping" PRIMARY KEY ("PizzaId", "ToppingId"), 
 	CONSTRAINT "FK_PizzaTopping_Pizzas_PizzaId" FOREIGN KEY ("PizzaId") REFERENCES "Pizzas" ("PizzaId") ON DELETE CASCADE, 
-	CONSTRAINT "FK_PizzaTopping_Toppings_ToppingId" FOREIGN KEY ("ToppingId") REFERENCES "Toppings" ("ToppingId") ON DELETE CASCADE )  
-
---drop table Pizzas
-CREATE TABLE "Pizzas" ( 
-	"PizzaId" INTEGER NOT NULL CONSTRAINT "PK_Pizzas" PRIMARY KEY AUTOINCREMENT, 
-	"OrderId" INTEGER NOT NULL )
-
---drop table Toppings
-CREATE TABLE "Toppings" ( 
-	"ToppingId" INTEGER NOT NULL CONSTRAINT "PK_Toppings" PRIMARY KEY AUTOINCREMENT, 
-	"ToppingName" TEXT, "ToppingQuantity" INTEGER NOT NULL )
+	CONSTRAINT "FK_PizzaTopping_Toppings_ToppingId" FOREIGN KEY ("ToppingId") REFERENCES "Toppings" ("ToppingId") ON DELETE CASCADE 
+);
