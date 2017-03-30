@@ -27,7 +27,7 @@ namespace MariosPizzerias.Business.DTOs
             return dao;
         }
 
-        public static Order fromDAO(Order dao)
+        public static Order fromDAO(DAO.Order dao)
         {
             var dto = new Order();
             dto.LocationId = dao.LocationId;

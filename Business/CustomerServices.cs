@@ -23,14 +23,21 @@ namespace MariosPizzerias.Business
         //Moved from IOrderData (please review!)
         public IEnumerable<DTO.Order> GetAll()
         {
-           
             var orders = _context.Orders.ToList();
-            return new List<DTO.Order>(orders);
+			var changedOrders = new List<DTO.Order>();
+
+			foreach (var order in orders)
+			{
+				changedOrders.Add(DTO.Order.fromDAO(order));
+			}
+
+			return changedOrders;
         }
-        public DTO.Order Get(int id)
+		public DTO.Order GetOrder(int id)
         {
-            //return _context.Orders.FirstOrDefault(o => o.OrderId == id);
-            return new DTO.Order();
+            var order = _context.Orders.FirstOrDefault(o => o.OrderId == id);
+			var dto = DTO.Order.fromDAO(order);
+			return dto;
         }
 
         public DTO.Order Add(DTO.Order newOrder)
@@ -39,6 +46,12 @@ namespace MariosPizzerias.Business
             _context.SaveChanges();
             return newOrder;
         }
+		//public DTO.Location GetLocation(int id)
+		//{
+		//	var location = _context.Locations.FirstOrDefault(l => l.LocationId == id);
+
+		//	return location;
+		//}
         // ##########################################################
     }
 }

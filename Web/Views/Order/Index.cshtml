@@ -1,10 +1,18 @@
 ﻿<div>
     <table>
+			<th>Order Number</th>
+			<th>Store Name</th>
 			<th>Name</th>
+			<th>Total Price</th>
+			<th>Time Ordered</th>
         @foreach (var order in Model.Orders)
         {
             <tr>
+				<td>@order.OrderId</td>
+				<td></td>
             	<td>@order.OrderOwner</td>
+				<td>@order.OrderPrice</td>
+				<td>@order.OrderTime</td>
 			</tr>
 		}
     </table>
