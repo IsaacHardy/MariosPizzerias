@@ -31,6 +31,9 @@ namespace Web
         {
             // Add framework services.
             services.AddMvc();
+            services.AddDbContext<MariosPizzeriaDbContext>();
+            services.AddScoped<ICustomerServices,CustomerServices>();
+            services.AddScoped<IAdminServices,AdminServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
