@@ -1,36 +1,31 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Business;
-using Data;
+using MariosPizzerias.Business;
+using MariosPizzerias.Data;
 using Web.ViewModels;
 
 namespace Controllers
 {
     public class OrderController : Controller
     {
-        private IOrderData _orderData;
-        private ILocationData _locationData;
-        private IPizzaData _pizzaData;
+		private ICustomerServices _customerServices;
+		private IAdminServices _adminServices;
 
-        public OrderController(IOrderData orderData, ILocationData locationData, IPizzaData pizzaData)
+		public OrderController(ICustomerServices customerServices, IAdminServices adminServices)
         {
-            _orderData = orderData;
-            _locationData = locationData;
-            _pizzaData = pizzaData;
+			_customerServices = customerServices;
+			_adminServices = adminServices;
         }
 
         public IActionResult Index()
         {
-            var model = new OrderPageViewModel();
-            model.Order = _orderData.GetAll();
-            model.Location = _locationData.GetAll();
-            model.Pizza = _pizzaData.GetAll();
+            
 
-            return View(model);
+            return View();
         }
 
         public IActionResult Tracker(int id)
         {
-            var model = _orderData.Get(id);
+			var model = _customerServices.Get(id);
 
             if (model == null)
             {
@@ -55,7 +50,7 @@ namespace Controllers
                 newOrder.OrderOwner = model.OrderOwner;
                 newOrder.OrderId = model.OrderId;
 
-                _orderData.Add(newOrder);
+				//_customerServices.Add(newOrder);
 
                 return RedirectToAction("Tracker", new { id = newOrder.OrderId });
             }

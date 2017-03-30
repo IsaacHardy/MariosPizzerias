@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MariosPizzerias.Business
 {
-    interface ICustomerServices
+    public interface ICustomerServices
     {
         /*
 		 * input : 
