@@ -2,6 +2,8 @@
 using MariosPizzerias.Business;
 using DTO = MariosPizzerias.Business.DTOs;
 using MariosPizzerias.Web.ViewModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
 
 namespace Controllers
 {
@@ -19,7 +21,7 @@ namespace Controllers
         public IActionResult Index()
         {
             var model = new OrderPageViewModel();
-            model.Orders = _customerServices.GetAll();
+            model.Orders = _customerServices.GetOrders();
 
             return View(model);
         }
@@ -41,6 +43,8 @@ namespace Controllers
         public IActionResult Create()
         {
 			var model = new OrderCreateViewModel();
+			model.Locations = _customerServices.GetLocations();
+			model.Toppings = _customerServices.GetToppings();
 
             return View(model);
         }
@@ -52,6 +56,7 @@ namespace Controllers
             {
                 var newOrder = new DTO.Order();
                 newOrder.OrderOwner = model.OrderOwner;
+				newOrder.LocationId = model.SelectedLocationId;
 
 				var dto = _customerServices.Add(newOrder);
 
