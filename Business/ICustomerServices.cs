@@ -17,7 +17,7 @@ namespace MariosPizzerias.Business
 		//Moved from IOrderData (please review!)
         IEnumerable<Order> GetAll();
         Order GetOrder(int id);
-		//Location GetLocation(int id);
+		String GetLocationName(int id);
         Order Add(Order newOrder);
     }
 }

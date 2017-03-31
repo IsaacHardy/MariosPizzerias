@@ -1,4 +1,7 @@
-﻿<div>
+﻿@model MariosPizzerias.Web.ViewModels.OrderPageViewModel
+
+@Html.ActionLink("Test", "Create", "Order")
+<div>
     <table>
 			<th>Order Number</th>
 			<th>Store Name</th>
@@ -13,6 +16,7 @@
             	<td>@order.OrderOwner</td>
 				<td>@order.OrderPrice</td>
 				<td>@order.OrderTime</td>
+				<td>@Html.ActionLink("View Order", "Tracker", "Order", new { id = @order.OrderId })</td>
 			</tr>
 		}
     </table>

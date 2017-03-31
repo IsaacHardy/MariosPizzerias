@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using DAO = MariosPizzerias.Data;
 using DTO = MariosPizzerias.Business.DTOs;
@@ -37,21 +36,28 @@ namespace MariosPizzerias.Business
         {
             var order = _context.Orders.FirstOrDefault(o => o.OrderId == id);
 			var dto = DTO.Order.fromDAO(order);
+
 			return dto;
         }
 
         public DTO.Order Add(DTO.Order newOrder)
         {
-            _context.Add(newOrder);
-            _context.SaveChanges();
-            return newOrder;
-        }
-		//public DTO.Location GetLocation(int id)
-		//{
-		//	var location = _context.Locations.FirstOrDefault(l => l.LocationId == id);
+			var dao = DTO.Order.toDAO(newOrder);
 
-		//	return location;
-		//}
+			_context.Add(dao);
+            _context.SaveChanges();
+
+			var dto = DTO.Order.fromDAO(dao);
+
+            return dto;
+        }
+		public string GetLocationName(int id)
+		{
+			var location = _context.Locations.FirstOrDefault(l => l.LocationId == id);
+			var dto = DTO.Location.fromDAO(location);
+
+			return dto.LocationName;
+		}
         // ##########################################################
     }
 }
