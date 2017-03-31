@@ -13,6 +13,7 @@ namespace MariosPizzerias.Business.DTOs
         public int ToppingId { get; set; }
         public Topping Topping { get; set; }
 
+        //toDAO
         public static DAO.PizzaTopping toDAO(PizzaTopping dto)
         {
             var dao = new DAO.PizzaTopping();
@@ -23,6 +24,7 @@ namespace MariosPizzerias.Business.DTOs
             return dao;
         }
 
+        //fromDAO
         public static PizzaTopping fromDAO(DAO.PizzaTopping dao)
         {
             var dto = new PizzaTopping();
