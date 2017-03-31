@@ -1,4 +1,5 @@
-﻿@model Data.Order
+﻿@model MariosPizzerias.Web.ViewModels.OrderCreateViewModel
+
 <div>
     <h1>Submit Your Order</h1>
     <div>
@@ -7,11 +8,11 @@
         {
             <div>
                 <label>Your Name</label>
-                @Html.EditorFor(m => m.OrderOwner)
-                @Html.ValidationMessageFor(m => m.OrderOwner)
+                @Html.TextBoxFor(m => m.OrderOwner)
             </div>
             <div>
                 <input type="submit" value="Submit" />
-            </div>}
+            </div>
+		}
     </div>
 </div>

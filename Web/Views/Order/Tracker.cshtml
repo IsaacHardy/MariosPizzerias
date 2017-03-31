@@ -1,14 +1,14 @@
-﻿@model Data.Order
-<h1>@Model.OrderOwner</h1>
+﻿@model MariosPizzerias.Web.ViewModels.OrderPageViewModel
+
 <label>Your Name: </label>
+<div>@Model.Order.OrderOwner<div>
+		
+<label>Order Status: </label>
+<div>@Model.Order.OrderStatus<div>
+				
+<label>Total Price: </label>
+<div>@Model.Order.OrderPrice<div>
+						
 <div>
-    @Model.OrderOwner<div>
-    <label>Order Status: </label>
-    <div>
-        @Model.OrderStatus<div>
-        <label>Total Price: </label>
-        <div>
-            @Model.OrderPrice<div>
-            <div>
-                @Html.ActionLink("Order", "Index")
-            </div>
+    @Html.ActionLink("Order", "Index")
+</div>
