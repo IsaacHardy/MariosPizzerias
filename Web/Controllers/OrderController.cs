@@ -21,12 +21,13 @@ namespace Controllers
         {
             var model = new OrderPageViewModel();
             model.Orders = _customerServices.GetAll();
+
             return View(model);
         }
 
         public IActionResult Tracker()
         {
-		/*	var model = _customerServices.Get(id);
+		/*	var model = _customerServices.GetOrder(id);
         *
         *    if (model == null)
             {
