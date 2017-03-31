@@ -14,6 +14,7 @@ namespace MariosPizzerias.Business.DTOs
         public int LocationId { get; set; }
         public List<Pizza> Pizzas { get; set; }
 
+        //toDAO
         public static DAO.Order toDAO(Order dto)
         {
             var dao = new DAO.Order();
@@ -26,6 +27,7 @@ namespace MariosPizzerias.Business.DTOs
             return dao;
         }
 
+        //fromDAO
         public static Order fromDAO(DAO.Order dao)
         {
             var dto = new Order();
