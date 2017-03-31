@@ -13,6 +13,7 @@ namespace MariosPizzerias.Business.DTOs
         public string LocationAddress { get; set; }
         public string LocationPhoneNumber { get; set; }
 
+        //toDAO
         public static DAO.Location toDAO(Location dto)
         {
             var dao = new DAO.Location();
@@ -22,7 +23,7 @@ namespace MariosPizzerias.Business.DTOs
             dao.LocationPhoneNumber = dto.LocationPhoneNumber;
             return dao;
         }
-
+        //fromDAO
         public static Location fromDAO(DAO.Location dao)
         {
             var dto = new Location();
