@@ -47,7 +47,7 @@ namespace MariosPizzerias.Business
 		public List<DTO.Topping> GetToppings()
 		{
 			var toppings = _context.Toppings.ToList();
-			var changedToppings = new List<DTO.Location>();
+			var changedToppings = new List<DTO.Topping>();
 
 			foreach (var topping in toppings)
 			{

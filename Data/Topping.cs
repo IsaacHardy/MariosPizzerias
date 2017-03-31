@@ -8,6 +8,6 @@ namespace MariosPizzerias.Data
         public int ToppingId { get; set; }
         public string ToppingName { get; set; }
         public int ToppingQuantity { get; set; }
-        public ICollection<PizzaTopping> PizzaToppings { get; set; }
+        //public ICollection<PizzaTopping> PizzaToppings { get; set; }
     }
 }

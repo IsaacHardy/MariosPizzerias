@@ -50,7 +50,7 @@ namespace Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(OrderCreateViewModel model)
+        public IActionResult Order(OrderCreateViewModel model)
         {
           	if (ModelState.IsValid)
             {
