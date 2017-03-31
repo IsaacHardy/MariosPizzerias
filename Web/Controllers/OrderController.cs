@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MariosPizzerias.Business;
 using DTO = MariosPizzerias.Business.DTOs;
-using DAO = MariosPizzerias.Data;
-using Web.ViewModels;
+using MariosPizzerias.Web.ViewModels;
 
 namespace Controllers
 {
@@ -25,37 +24,40 @@ namespace Controllers
             return View(model);
         }
 
-        public IActionResult Tracker()
+		public IActionResult Tracker(int id)
         {
-		/*	var model = _customerServices.GetOrder(id);
-        *
-        *    if (model == null)
+			var model = new OrderPageViewModel();
+			model.Order = _customerServices.GetOrder(id);
+        
+            if (model == null)
             {
                 return RedirectToAction("Index");
             }
 
-        */    return View();
+            return View(model);
         }
 
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+			var model = new OrderCreateViewModel();
+
+            return View(model);
         }
 
         [HttpPost]
-        public IActionResult Create(OrderEditViewModel model)
+        public IActionResult Create(OrderCreateViewModel model)
         {
-          /*  if (ModelState.IsValid)
+          	if (ModelState.IsValid)
             {
-                var newOrder = new Order();
+                var newOrder = new DTO.Order();
                 newOrder.OrderOwner = model.OrderOwner;
-                newOrder.OrderId = model.OrderId;
 
-				//_customerServices.Add(newOrder);
+				var dto = _customerServices.Add(newOrder);
 
-                return RedirectToAction("Tracker", new { id = newOrder.OrderId });
-            } */
+				return RedirectToAction("Tracker", new { id = dto.OrderId });
+            } 
+
             return View();
         }
 
