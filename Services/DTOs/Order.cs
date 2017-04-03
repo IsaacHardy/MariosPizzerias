@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using DAO = MariosPizzerias.Data;
 
-namespace MariosPizzerias.Business.DTOs
+namespace MariosPizzerias.Services.DTOs
 {
     public class Order
     {
