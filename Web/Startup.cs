@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using MariosPizzerias.Data;
-using MariosPizzerias.Business;
+using MariosPizzerias.Services;
 
 namespace Web
 {
