@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26228.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{48A87B41-9088-4482-9FEC-363FE62A2A21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{1407FB20-A359-4926-B7C4-ACE7B5870608}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Business\Services.csproj", "{1407FB20-A359-4926-B7C4-ACE7B5870608}"
 	ProjectSection(ProjectDependencies) = postProject
 		{2F243572-BB63-40DF-9CCB-722B7A20A5CE} = {2F243572-BB63-40DF-9CCB-722B7A20A5CE}
 	EndProjectSection

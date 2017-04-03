@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MariosPizzerias.Business;
-using DTO = MariosPizzerias.Business.DTOs;
+using MariosPizzerias.Services;
+using DTO = MariosPizzerias.Services.DTOs;
 using MariosPizzerias.Web.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;

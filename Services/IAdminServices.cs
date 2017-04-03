@@ -1,9 +1,9 @@
-﻿using MariosPizzerias.Business.DTOs;
+﻿using MariosPizzerias.Services.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MariosPizzerias.Business
+namespace MariosPizzerias.Services
 {
     public interface IAdminServices
     {
