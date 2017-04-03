@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using DTO = MariosPizzerias.Services.DTOs;
+using DTO = MariosPizzerias.Services.Models;
 
 namespace MariosPizzerias.Web.ViewModels
 {
