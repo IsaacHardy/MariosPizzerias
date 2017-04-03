@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using DAO = MariosPizzerias.Data;
 using System.Text;
 
-namespace MariosPizzerias.Services.DTOs
+namespace MariosPizzerias.Services.Models
 {
     public class PizzaTopping
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using DTO = MariosPizzerias.Services.DTOs;
+using DTO = MariosPizzerias.Services.Models;
 
 namespace MariosPizzerias.Web.ViewModels
 {
