@@ -7,6 +7,7 @@ namespace MariosPizzerias.Data
     {
         public DbSet<Order> Orders { get; set; }
 		public DbSet<Location> Locations { get; set; }
+		public DbSet<Topping> Toppings { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

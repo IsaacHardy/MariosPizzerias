@@ -10,7 +10,7 @@ namespace MariosPizzerias.Business.DTOs
         public int ToppingId { get; set; }
         public string ToppingName { get; set; }
         public int ToppingQuantity { get; set; }
-        public ICollection<PizzaTopping> PizzaToppings { get; set; }
+        //public ICollection<PizzaTopping> PizzaToppings { get; set; }
 
         //toDAO
         public static DAO.Topping toDAO(Topping dto)

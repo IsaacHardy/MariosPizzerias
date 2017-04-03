@@ -7,9 +7,43 @@
         @using (Html.BeginForm())
         {
             <div>
-                <label>Your Name</label>
+                <label>Phone Number</label>
                 @Html.TextBoxFor(m => m.OrderOwner)
             </div>
+			<div>
+				<label>Select Store</label>
+				@Html.DropDownListFor(m=>m.SelectedLocationId, Model.LocationsList)
+			</div>
+			<div>
+				<label>Add a Pizza</label>
+			
+				<input type="button" value="+" onclick="addPizzaInstance()"/>
+				<div id="pizzaContainer" class="hide">
+					<div>
+						@foreach (var topping in Model.Toppings)
+						{	
+							<input type="checkbox" value="">
+							<label>@topping.ToppingName</label>
+						}
+						<input type="button" value="Submit Pizza" onclick="submitPizza()"/>
+					</div>
+				</div>
+			<script type="text/javascript">
+				function addPizzaInstance() {
+					var pizzaContainer = document.getElementById("pizzaContainer");
+				
+					pizzaContainer.classList.remove("hide");
+				}
+
+				function submitPizza() {
+					var pizzaContainer = document.getElementById("pizzaContainer");
+				
+					pizzaContainer.classList.add("hide");
+				}
+			</script>
+
+			</div>
+			<div>Total Price: $0.00</div>
             <div>
                 <input type="submit" value="Submit" />
             </div>

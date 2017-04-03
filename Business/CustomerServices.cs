@@ -20,7 +20,7 @@ namespace MariosPizzerias.Business
             return 1;
         }
         //Moved from IOrderData (please review!)
-        public IEnumerable<DTO.Order> GetAll()
+        public IEnumerable<DTO.Order> GetOrders()
         {
             var orders = _context.Orders.ToList();
 			var changedOrders = new List<DTO.Order>();
@@ -32,6 +32,30 @@ namespace MariosPizzerias.Business
 
 			return changedOrders;
         }
+		public List<DTO.Location> GetLocations()
+		{
+			var locations = _context.Locations.ToList();
+			var changedLocations = new List<DTO.Location>();
+
+			foreach (var location in locations)
+			{
+				changedLocations.Add(DTO.Location.fromDAO(location));
+			}
+
+			return changedLocations;
+		}
+		public List<DTO.Topping> GetToppings()
+		{
+			var toppings = _context.Toppings.ToList();
+			var changedToppings = new List<DTO.Topping>();
+
+			foreach (var topping in toppings)
+			{
+				changedToppings.Add(DTO.Topping.fromDAO(topping));
+			}
+
+			return changedToppings;
+		}
 		public DTO.Order GetOrder(int id)
         {
             var order = _context.Orders.FirstOrDefault(o => o.OrderId == id);

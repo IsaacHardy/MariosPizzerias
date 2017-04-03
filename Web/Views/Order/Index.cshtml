@@ -1,11 +1,11 @@
 ﻿@model MariosPizzerias.Web.ViewModels.OrderPageViewModel
 
-@Html.ActionLink("Test", "Create", "Order")
+@Html.ActionLink("Create Your Order", "Create", "Order")
 <div>
-    <table>
+    <table class="table table-bordered">
 			<th>Order Number</th>
 			<th>Store Name</th>
-			<th>Name</th>
+			<th>Phone Number</th>
 			<th>Total Price</th>
 			<th>Time Ordered</th>
         @foreach (var order in Model.Orders)
