@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 using MariosPizzerias.Data;
 using MariosPizzerias.Services;
 
-namespace Web
+namespace MariosPizzerias.Web
 {
     public class Startup
     {

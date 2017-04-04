@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using DAO = MariosPizzerias.Data;
-using DTO = MariosPizzerias.Services.DTOs;
+using DTO = MariosPizzerias.Services.Models;
 
 namespace MariosPizzerias.Services
 {

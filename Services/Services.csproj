@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <AssemblyName>MariosPizzerias.Business</AssemblyName>
-    <RootNamespace>MariosPizzerias.Business</RootNamespace>
+    <AssemblyName>MariosPizzerias.Services</AssemblyName>
+    <RootNamespace>MariosPizzerias.Services</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
