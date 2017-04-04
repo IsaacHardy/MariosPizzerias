@@ -7,72 +7,72 @@
 INSERT INTO `Orders`(
 	`OrderId`,`LocationId`,`OrderOwner`,`OrderPrice`,`OrderStatus`,`OrderTime`
 ) VALUES (
-	2,3,"Jim Bob","34.00",3,''
+	2,3,"Jim Bob","34.00",3,'2017-01-02 03:05:55'
 );
 INSERT INTO `Orders`(
 	`OrderId`,`LocationId`,`OrderOwner`,`OrderPrice`,`OrderStatus`,`OrderTime`
 ) VALUES (
-	3,2,"George Jetson","11.89",3,''
+	3,2,"George Jetson","11.89",3,'2017-01-05 13:05:55'
 );
 INSERT INTO `Orders`(
 	`OrderId`,`LocationId`,`OrderOwner`,`OrderPrice`,`OrderStatus`,`OrderTime`
 ) VALUES (
-	4,2,"Fred Flintstone","56.92",3,''
+	4,2,"Fred Flintstone","56.92",3,'2017-02-07 18:05:55'
 );
 INSERT INTO `Orders`(
 	`OrderId`,`LocationId`,`OrderOwner`,`OrderPrice`,`OrderStatus`,`OrderTime`
 ) VALUES (
-	5,2,"John Doe","22.23",3,''
+	5,2,"John Doe","22.23",3,'2017-01-09 13:08:56'
 );
 INSERT INTO `Orders`(
 	`OrderId`,`LocationId`,`OrderOwner`,`OrderPrice`,`OrderStatus`,`OrderTime`
 ) VALUES (
-	6,3,"John Smith","14.77",3,''
+	6,3,"John Smith","14.77",3,'2017-01-10 06:09:57'
 );
 INSERT INTO `Orders`(
 	`OrderId`,`LocationId`,`OrderOwner`,`OrderPrice`,`OrderStatus`,`OrderTime`
 ) VALUES (
-	7,1,"Jessica Smith","23.45",3,''
+	7,1,"Jessica Smith","23.45",3,'2017-01-02 07:07:25'
 );
 INSERT INTO `Orders`(
 	`OrderId`,`LocationId`,`OrderOwner`,`OrderPrice`,`OrderStatus`,`OrderTime`
 ) VALUES (
-	8,1,"Cori Flower","87.45",2,''
+	8,1,"Cori Flower","87.45",2,'2017-01-03 06:15:34'
 );
 INSERT INTO `Orders`(
 	`OrderId`,`LocationId`,`OrderOwner`,`OrderPrice`,`OrderStatus`,`OrderTime`
 ) VALUES (
-	9,1,"Isaac Hardy","11.11",2,''
+	9,1,"Isaac Hardy","11.11",2,'2017-02-04 09:15:43'
 );
 INSERT INTO `Orders`(
 	`OrderId`,`LocationId`,`OrderOwner`,`OrderPrice`,`OrderStatus`,`OrderTime`
 ) VALUES (
-	10,1,"Rick Vampire","12.45",2,''
+	10,1,"Rick Vampire","12.45",2,'2016-01-05 01:07:59'
 );
 INSERT INTO `Orders`(
 	`OrderId`,`LocationId`,`OrderOwner`,`OrderPrice`,`OrderStatus`,`OrderTime`
 ) VALUES (
-	11,2,"Donald Trump","43.23",2,''
+	11,2,"Donald Trump","43.23",2,'2016-02-06 03:08:55'
 );
 INSERT INTO `Orders`(
 	`OrderId`,`LocationId`,`OrderOwner`,`OrderPrice`,`OrderStatus`,`OrderTime`
 ) VALUES (
-	12,3,"Lady Gaga","65.34",1,''
+	12,3,"Lady Gaga","65.34",1,'2016-02-09 05:14:55'
 );
 INSERT INTO `Orders`(
 	`OrderId`,`LocationId`,`OrderOwner`,`OrderPrice`,`OrderStatus`,`OrderTime`
 ) VALUES (
-	13,1,"Michael Jordan","35.00",1,''
+	13,1,"Michael Jordan","35.00",1,'2016-03-02 09:15:56'
 );
 INSERT INTO `Orders`(
 	`OrderId`,`LocationId`,`OrderOwner`,`OrderPrice`,`OrderStatus`,`OrderTime`
 ) VALUES (
-	14,2,"Magic Johnson","23.11",1,''
+	14,2,"Magic Johnson","23.11",1,'2016-02-02 04:16:35'
 );
 INSERT INTO `Orders`(
 	`OrderId`,`LocationId`,`OrderOwner`,`OrderPrice`,`OrderStatus`,`OrderTime`
 ) VALUES (
-	15,2,"Jeff Rice","38.99",1,''
+	15,2,"Jeff Rice","38.99",1,'2016-02-02 07:05:55'
 );
 
 --DELETE FROM `Pizzas`;
