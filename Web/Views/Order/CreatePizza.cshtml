@@ -2,7 +2,10 @@
 
 <div>
 	<div>
-		
+		@foreach (var pizza in Model.Pizzas)
+		{
+			<div>@pizza.PizzaId</div>
+		}
 	</div>
 	<label>Add a Pizza</label>
 	@using (Html.BeginForm())

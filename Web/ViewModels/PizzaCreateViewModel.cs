@@ -16,5 +16,16 @@ namespace MariosPizzerias.Web.ViewModels
 		public string OrderOwner { get; set; }
 		public int OrderId { get; set; }
 		public int SelectedLocationId { get; set; }
+
+		public PizzaCreateViewModel()
+		{
+			Locations = new List<DTO.Location>();
+			Toppings = new List<DTO.Topping>();
+			Pizzas = new List<DTO.Pizza>();
+			Pizza = new DTO.Pizza();
+			OrderOwner = "";
+			OrderId = 0;
+			SelectedLocationId = 0;
+		}
 	}
 }

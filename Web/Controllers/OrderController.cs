@@ -71,6 +71,9 @@ namespace Controllers
 		{
 			var model = new PizzaCreateViewModel();
 			model.Toppings = _customerServices.GetToppings();
+			model.Pizzas.Add(new DTO.Pizza() { OrderId = 1, PizzaId = 2 });
+			model.Pizzas.Add(new DTO.Pizza() { OrderId = 1, PizzaId = 3 });
+			model.Pizzas.Add(new DTO.Pizza() { OrderId = 1, PizzaId = 4 });
 
 			return View(model);
 		}
@@ -78,20 +81,14 @@ namespace Controllers
 		[HttpPost]
 		public IActionResult CreatePizza(PizzaCreateViewModel model)
 		{
-			if (ModelState.IsValid)
-			{
-				var newPizza = new DTO.Pizza();
+			var newPizza = new DTO.Pizza();
 
-				newPizza.OrderId = model.OrderId;
+			newPizza.OrderId = model.OrderId;
+			newPizza.PizzaId = 5;
 
-				model.Pizzas.Add(newPizza);
+			model.Pizzas.Add(newPizza);
 
-				ViewData["Pizzas"] = model.Pizzas;
-
-				return RedirectToAction("CreatePizza");
-			}
-
-			return View();
+			return View(model);
 		}
 
         public IActionResult Error()
