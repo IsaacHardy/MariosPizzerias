@@ -1,0 +1,37 @@
+﻿@model MariosPizzerias.Web.ViewModels.PizzaCreateViewModel
+
+<div>
+	<div>
+		
+	</div>
+	<label>Add a Pizza</label>
+	@using (Html.BeginForm())
+    {
+		<input type="button" value="+" onclick="addPizzaInstance()"/>
+		<div id="pizzaContainer" class="hide">
+			<div>
+				@for (var i = 0; i < Model.Toppings.Count; i++)
+				{	
+					@Html.CheckBoxFor(m => m.Toppings[i].Checked, new {@checked = "checked"});
+					@Html.HiddenFor(m => m.Toppings[i].ToppingId)
+				    @Html.DisplayFor(m => m.Toppings[i].ToppingName)
+				}
+				<input type="submit" value="Submit Pizza" onclick="submitPizza()"/>
+			</div>
+		</div>
+	}
+</div>
+
+<script type="text/javascript">
+	function addPizzaInstance() {
+		var pizzaContainer = document.getElementById("pizzaContainer");
+	
+		pizzaContainer.classList.remove("hide");
+	}
+
+	function submitPizza() {
+		var pizzaContainer = document.getElementById("pizzaContainer");
+	
+		pizzaContainer.classList.add("hide");
+	}
+</script>

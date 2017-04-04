@@ -44,18 +44,18 @@ namespace Controllers
         {
 			var model = new OrderCreateViewModel();
 			model.Locations = _customerServices.GetLocations();
-			model.Toppings = _customerServices.GetToppings();
+
 
             return View(model);
         }
 
         [HttpPost]
-        public IActionResult Order(OrderCreateViewModel model)
+        public IActionResult Create(OrderCreateViewModel model)
         {
           	if (ModelState.IsValid)
             {
                 var newOrder = new DTO.Order();
-                newOrder.OrderOwner = model.OrderOwner;
+				newOrder.OrderOwner = model.OrderOwner != null ? model.OrderOwner : "";
 				newOrder.LocationId = model.SelectedLocationId;
 
 				var dto = _customerServices.Add(newOrder);
@@ -65,6 +65,34 @@ namespace Controllers
 
             return View();
         }
+
+		[HttpGet]
+		public IActionResult CreatePizza()
+		{
+			var model = new PizzaCreateViewModel();
+			model.Toppings = _customerServices.GetToppings();
+
+			return View(model);
+		}
+
+		[HttpPost]
+		public IActionResult CreatePizza(PizzaCreateViewModel model)
+		{
+			if (ModelState.IsValid)
+			{
+				var newPizza = new DTO.Pizza();
+
+				newPizza.OrderId = model.OrderId;
+
+				model.Pizzas.Add(newPizza);
+
+				ViewData["Pizzas"] = model.Pizzas;
+
+				return RedirectToAction("CreatePizza");
+			}
+
+			return View();
+		}
 
         public IActionResult Error()
         {
